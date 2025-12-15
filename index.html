@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Maze Runner Challenge</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍆</text></svg>" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Full-screen blurred video background -->
+    <div class="bg-video">
+      <video id="bgVideo" autoplay muted loop playsinline crossorigin="anonymous">
+        <source src="https://assets.mixkit.co/videos/18354/18354-720.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="bg-overlay"></div>
+    </div>
+
+    <div class="app">
+      <h2>🎮 Maze Runner Challenge 🎮</h2>
+      <div class="stats">
+        <div id="timerDisplay" class="timer">⏱️ Time: 0:00</div>
+        <div id="scoreDisplay" class="score">🏆 Score: 0</div>
+        <div id="difficultyDisplay" class="difficulty">📊 Level: Easy</div>
+      </div>
+      <canvas id="mainForm"></canvas>
+
+      <div id="congratsModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+          <h1>🎉 Congratulations! 🎉</h1>
+          <p>You Won!</p>
+          <p id="finalTime">Time: 0:00</p>
+          <p id="finalScore">Score: 0</p>
+          <button id="playAgainBtn" class="btn-play">Play Again</button>
+        </div>
+      </div>
+
+      <div id="settings" style="display: none;">
+        <table>
+          <tbody>
+            <tr>
+              <td><label for="cols">Columns:</label></td>
+              <td><input id="cols" type="text" size="5" value="20" /></td>
+            </tr>
+            <tr>
+              <td><label for="rows">Rows:</label></td>
+              <td><input id="rows" type="text" size="5" value="20" /></td>
+            </tr>
+            <tr>
+              <td><label for="level">Level:</label></td>
+              <td>
+                <select id="level">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td><input id="generate" type="button" value="Generate Maze" class="btn-generate" /></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td><button id="showHint" class="btn-hint">💡 Show Hint (P)</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:12px;margin-top:8px">Use Arrow Keys or WASD to move • Press P to toggle solution</p>
+      </div>
+
+    <script src="script.js"></script>
+
+    <!-- Fireworks Celebration Overlay
+    <div id="fireworks" class="fireworks-overlay">
+      <div class="fireworks-message" id="fireworksMessage">🎊 Congratulations! 🎊</div>
+      <div class="fireworks-container" id="fireworksContainer"></div>
+    </div> -->
+  </body>
+</html>
