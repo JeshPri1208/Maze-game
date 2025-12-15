@@ -1,1 +1,1 @@
-# Maze-game
+A browser‑based maze game developed using HTML, CSS, and JavaScript. The project utilizes HTML5 Canvas for rendering the maze grid, CSS for styling the interface, and JavaScript for implementing core game logic including player movement, scoring, level progression, and hint functionality. Each level introduces increasing complexity, providing an engaging challenge while demonstrating interactive programming concepts and responsive design within a web environment.
